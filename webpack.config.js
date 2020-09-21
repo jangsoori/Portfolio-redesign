@@ -18,6 +18,17 @@ module.exports = {
 
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
       { test: /\.svg$/, use: "svg-inline-loader" },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              esModule: false,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

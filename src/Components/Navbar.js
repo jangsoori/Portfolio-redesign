@@ -149,10 +149,18 @@ export default function Navbar() {
         <StyledNavbar>
           <StyledLogo>Gracjan Kolodziej</StyledLogo>
           <StyledMenu isMobile={open}>
-            <StyledMenuItem>Home</StyledMenuItem>
-            <StyledMenuItem>Projects</StyledMenuItem>
-            <StyledMenuItem>About</StyledMenuItem>
-            <StyledMenuItem>Contact</StyledMenuItem>
+            <StyledMenuItem>
+              <a href="#">Home</a>
+            </StyledMenuItem>
+            <StyledMenuItem>
+              <a href="#projects">Projects</a>
+            </StyledMenuItem>
+            <StyledMenuItem>
+              <a href="#skills">Skills</a>
+            </StyledMenuItem>
+            <StyledMenuItem>
+              <a href="#about">About</a>
+            </StyledMenuItem>
             <StyledClose onClick={() => handleClick()}>
               <span></span>
               <span></span>

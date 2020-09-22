@@ -4,6 +4,10 @@ export const Container = styled.section`
   max-width: 1800px;
   padding: 0 9rem;
   margin: 0 auto;
+
+  @media only screen and (max-width: 720px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const SectionWrapper = styled.section`

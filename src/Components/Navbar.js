@@ -36,6 +36,12 @@ const StyledMenu = styled.ul`
 const StyledMenuItem = styled.li`
   font-weight: 300;
   font-size: 2.4rem;
+  transition: all 0.2s ease;
+  :hover {
+    cursor: pointer;
+    ${"" /* This shadow does not move the text, unlike setting font-weight. And looks better! */}
+    text-shadow: 0px 0px 1px black;
+  }
 `;
 
 export default function Navbar() {
@@ -52,7 +58,7 @@ export default function Navbar() {
     }
   };
   return (
-    <NavbarWrapper secondary={scroll && true} scroll={scroll && true}>
+    <NavbarWrapper primary={scroll && true} scroll={scroll && true}>
       <Container>
         <StyledNavbar>
           <StyledLogo>Gracjan Kolodziej</StyledLogo>

@@ -26,6 +26,7 @@ const StyledText = styled.h2`
   ${"" /* color: ${({ theme }) => theme.colors.primary}; */}
   span {
     font-weight: 400;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 

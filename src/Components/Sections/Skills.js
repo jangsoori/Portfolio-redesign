@@ -10,6 +10,7 @@ import {
 
 import { Container, SectionWrapper } from "../styled/Container";
 
+//ICON IMPORTS
 import cssIcon from "../../Assets/Icons/css3.svg";
 import htmlIcon from "../../Assets/Icons/html5.svg";
 import jsIcon from "../../Assets/Icons/javascript.svg";
@@ -21,6 +22,8 @@ import gitIcon from "../../Assets/Icons/git.svg";
 import npmIcon from "../../Assets/Icons/npm.svg";
 import webpackIcon from "../../Assets/Icons/webpack.svg";
 import SVG from "react-inlinesvg";
+
+//STYLED
 const StyledSkillsContent = styled.section``;
 const StyledSkillsList = styled.ul`
   display: grid;

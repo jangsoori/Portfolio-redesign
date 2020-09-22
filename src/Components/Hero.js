@@ -4,7 +4,7 @@ import { Container, SectionWrapper } from "./styled/Container";
 const heroimg = require("../Assets/Images/Hero.png");
 
 const StyledHeroWrapper = styled(SectionWrapper)`
-  height: 100vh;
+  height: 100%;
 `;
 
 const StyledHero = styled.section`
@@ -74,7 +74,7 @@ const StyledHeroRight = styled.section``;
 const StyledHeroImg = styled.img``;
 export default function Hero() {
   return (
-    <StyledHeroWrapper primary>
+    <StyledHeroWrapper secondary>
       <Container>
         <StyledHero>
           <StyledHeroLeft>

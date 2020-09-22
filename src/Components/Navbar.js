@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, SectionWrapper } from "./styled/Container";
 import styled, { css } from "styled-components";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const NavbarWrapper = styled(SectionWrapper)`
   z-index: 1000;
@@ -61,7 +62,7 @@ const StyledMenu = styled.ul`
 const StyledMenuItem = styled.li`
   font-weight: 300;
   font-size: 2.4rem;
-  transition: all 0.2s ease;
+  ${"" /* transition:  0.2s ease; */}
   cursor: pointer;
 `;
 
@@ -121,6 +122,25 @@ const StyledClose = styled(StyledBurger)`
   }
 `;
 
+const links = [
+  { display: "Home", id: "hero" },
+  { display: "Projects", id: "projects" },
+  { display: "Skills", id: "skills" },
+  { display: "About", id: "about" },
+];
+
+const renderLinks = () => {
+  return links.map((link) => {
+    return (
+      <StyledMenuItem>
+        <Link spy={true} smooth={true} offset={-70} duration={500} to={link.id}>
+          {link.display}
+        </Link>
+      </StyledMenuItem>
+    );
+  });
+};
+
 export default function Navbar() {
   //HANDLE BACKGROUND CHANGE ON SCROLL
   const [scroll, setScroll] = React.useState(false);
@@ -142,25 +162,13 @@ export default function Navbar() {
     setOpen(!open);
   };
 
-  console.log(open);
   return (
     <NavbarWrapper primary={scroll && true} scroll={scroll && true}>
       <Container>
         <StyledNavbar>
           <StyledLogo>Gracjan Kolodziej</StyledLogo>
           <StyledMenu isMobile={open}>
-            <StyledMenuItem>
-              <a href="#">Home</a>
-            </StyledMenuItem>
-            <StyledMenuItem>
-              <a href="#projects">Projects</a>
-            </StyledMenuItem>
-            <StyledMenuItem>
-              <a href="#skills">Skills</a>
-            </StyledMenuItem>
-            <StyledMenuItem>
-              <a href="#about">About</a>
-            </StyledMenuItem>
+            {renderLinks()}
             <StyledClose onClick={() => handleClick()}>
               <span></span>
               <span></span>

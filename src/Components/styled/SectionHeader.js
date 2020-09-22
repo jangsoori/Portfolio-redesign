@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const SectionHeader = styled.header`
   display: flex;
   flex-direction: column;
-
+  padding-bottom: 4.2rem;
   > h2,
   > h4 {
     ${({ primary }) =>

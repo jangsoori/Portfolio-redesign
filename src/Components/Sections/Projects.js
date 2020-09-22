@@ -6,8 +6,10 @@ import {
   SectionSubtitle,
   StyledSectionContent,
 } from "../styled/SectionHeader";
-
 import { Container, SectionWrapper } from "../styled/Container";
+import ProjectsList from "./ProjectsList";
+
+const StyledProjectsContent = styled.section``;
 
 export default function Projects() {
   return (
@@ -20,6 +22,9 @@ export default function Projects() {
               Collection of projects developed by me
             </SectionSubtitle>
           </SectionHeader>
+          <StyledProjectsContent>
+            <ProjectsList />
+          </StyledProjectsContent>
         </StyledSectionContent>
       </Container>
     </SectionWrapper>

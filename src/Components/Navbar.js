@@ -3,6 +3,7 @@ import { Container, SectionWrapper } from "./styled/Container";
 import styled, { css } from "styled-components";
 
 const NavbarWrapper = styled(SectionWrapper)`
+  z-index: 1000;
   position: fixed;
   width: 100%;
   top: 0;
@@ -23,7 +24,7 @@ const StyledNavbar = styled.nav`
   padding: 1.6rem 0;
 `;
 const StyledLogo = styled.h1`
-  font-weight: 500;
+  font-weight: 300;
   font-size: 3rem;
 `;
 const StyledMenu = styled.ul`
@@ -37,11 +38,7 @@ const StyledMenuItem = styled.li`
   font-weight: 300;
   font-size: 2.4rem;
   transition: all 0.2s ease;
-  :hover {
-    cursor: pointer;
-    ${"" /* This shadow does not move the text, unlike setting font-weight. And looks better! */}
-    text-shadow: 0px 0px 1px black;
-  }
+  cursor: pointer;
 `;
 
 export default function Navbar() {
@@ -49,6 +46,7 @@ export default function Navbar() {
   const [scroll, setScroll] = React.useState(false);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
   }, [scroll]);
   const handleScroll = () => {
     if (window.pageYOffset > 0) {

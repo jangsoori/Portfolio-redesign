@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 html{
       /* 1rem = 10px */
   font-size: 62.5%;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   body{
     line-height:1.2;
@@ -24,7 +24,7 @@ html{
     padding:0;
     margin:0;
     box-sizing:border-box;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
   }
 `;

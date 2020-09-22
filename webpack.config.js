@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -35,6 +37,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
+    new CompressionPlugin(),
   ],
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
 };

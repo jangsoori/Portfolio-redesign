@@ -4,14 +4,17 @@ import { Container, SectionWrapper } from "./styled/Container";
 const heroimg = require("../Assets/Images/Hero.png");
 
 const StyledHeroWrapper = styled(SectionWrapper)`
-  height: 100%;
+  height: 100vh;
 `;
 
 const StyledHero = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 27rem 0;
+  height: 100%;
+  @media only screen and (max-width: 720px) {
+    justify-content: center;
+  }
 `;
 
 const StyledHeroLeft = styled.section`
@@ -28,6 +31,11 @@ const StyledText = styled.h2`
     font-weight: 400;
     color: ${({ theme }) => theme.colors.primary};
   }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 5rem;
+    justify-self: center;
+  }
 `;
 
 const StyledBtnsWrapper = styled.section`
@@ -35,6 +43,9 @@ const StyledBtnsWrapper = styled.section`
   justify-content: left;
   grid-template-columns: auto auto;
   column-gap: 3rem;
+  @media only screen and (max-width: 720px) {
+    justify-content: center;
+  }
 `;
 const StyledBtn = styled.button`
   background: white;
@@ -53,6 +64,12 @@ const StyledBtn = styled.button`
     background: ${({ theme }) => theme.colors.primary};
     color: white;
   }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+    width: 10rem;
+  }
 `;
 
 const StyledSocialsWrapper = styled.section`
@@ -67,15 +84,23 @@ const StyledSocialsWrapper = styled.section`
     color: ${({ theme }) => theme.colors.primary};
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 720px) {
+    justify-self: center;
+  }
 `;
 
 const StyledHeroRight = styled.section``;
 
-const StyledHeroImg = styled.img``;
+const StyledHeroImg = styled.img`
+  @media only screen and (max-width: 1100px) {
+    display: none;
+  }
+`;
 export default function Hero() {
   return (
     <StyledHeroWrapper secondary>
-      <Container>
+      <Container style={{ height: "100%" }}>
         <StyledHero>
           <StyledHeroLeft>
             <StyledText>

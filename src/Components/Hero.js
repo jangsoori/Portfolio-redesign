@@ -11,7 +11,7 @@ const StyledHero = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 23rem 0;
+  padding: 27rem 0;
 `;
 
 const StyledHeroLeft = styled.section`

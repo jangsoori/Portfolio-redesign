@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <SectionWrapper padded primary>
       <Container>
-        <StyledSectionContent>
+        <StyledSectionContent id="projects">
           <SectionHeader>
             <SectionTitle>Projects</SectionTitle>
             <SectionSubtitle>

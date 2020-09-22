@@ -101,7 +101,7 @@ export default function Hero() {
   return (
     <StyledHeroWrapper secondary>
       <Container style={{ height: "100%" }}>
-        <StyledHero>
+        <StyledHero id="hero">
           <StyledHeroLeft>
             <StyledText>
               Hi!

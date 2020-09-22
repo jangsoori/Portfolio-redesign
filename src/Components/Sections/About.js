@@ -25,7 +25,7 @@ export default function About() {
   return (
     <SectionWrapper padded primary>
       <Container>
-        <StyledSectionContent>
+        <StyledSectionContent id="about">
           <SectionHeader secondary>
             <SectionTitle>About</SectionTitle>
             <SectionSubtitle>Few words about me</SectionSubtitle>

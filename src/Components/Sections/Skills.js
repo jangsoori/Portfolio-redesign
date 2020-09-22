@@ -65,7 +65,7 @@ export default function Skills() {
   return (
     <SectionWrapper padded secondary>
       <Container>
-        <StyledSectionContent>
+        <StyledSectionContent id="skills">
           <SectionHeader primary>
             <SectionTitle>Skills</SectionTitle>
             <SectionSubtitle>Things I have learned, so far</SectionSubtitle>

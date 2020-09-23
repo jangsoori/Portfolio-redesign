@@ -33,7 +33,7 @@ const StyledLogo = styled.h1`
 `;
 const StyledMenu = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   align-items: center;
   text-align: center;
   column-gap: 2.7rem;
@@ -46,7 +46,7 @@ const StyledMenu = styled.ul`
     background: ${({ theme }) => theme.colors.primary};
     box-shadow: 0 0 5px 0 rgb(0, 0, 0);
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, max-content);
+    grid-template-rows: repeat(5, max-content);
     padding-top: 10rem;
     gap: 2rem;
     transform: translateX(100%);
@@ -130,6 +130,7 @@ const links = [
   { display: "Projects", id: "projects" },
   { display: "Skills", id: "skills" },
   { display: "About", id: "about" },
+  { display: "Contact", id: "contact" },
 ];
 
 const StyledLink = styled(Link)`

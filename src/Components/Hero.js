@@ -64,9 +64,9 @@ const StyledBtnsWrapper = styled.section`
     align-items: end;
   }
 `;
-const StyledBtn = styled.button`
+const StyledBtn = styled.a`
   background: white;
-
+  text-align: center;
   ${"" /* text-transform: uppercase; */}
   border: 2px solid ${({ theme }) => theme.colors.primary};
   width: 18rem;
@@ -142,13 +142,35 @@ export default function Hero() {
               <br />I build websites.
             </StyledText>
             <StyledBtnsWrapper>
-              <StyledBtn>resume</StyledBtn>
-              <StyledBtn>email me!</StyledBtn>
+              <StyledBtn
+                href="https://drive.google.com/file/d/1lbDyE3NPBN4KlSmsVv15hvUa_lWbWFod/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+              >
+                resume
+              </StyledBtn>
+              <StyledBtn href="mailto: gracjankolodziej0@gmail.com">
+                email me!
+              </StyledBtn>
             </StyledBtnsWrapper>
             <StyledSocialsWrapper>
-              <i className="devicon-github-plain"></i>
-              <i className="devicon-linkedin-plain"></i>
-              <i className="devicon-codepen-plain"></i>
+              <a
+                href="https://github.com/jangsoori"
+                target="_blank"
+                rel="noopener"
+              >
+                <i className="devicon-github-plain"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gracjan-ko%C5%82odziej-6b2b00149/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i className="devicon-linkedin-plain"></i>
+              </a>
+              <a href="https://codepen.io/soori" target="_blank" rel="noopener">
+                <i className="devicon-codepen-plain"></i>
+              </a>
             </StyledSocialsWrapper>
           </StyledHeroLeft>
           <StyledHeroRight>

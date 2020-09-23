@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <SectionWrapper padded secondary>
       <Container>
-        <StyledSectionContent>
+        <StyledSectionContent id="contact">
           <SectionHeader primary>
             <SectionTitle>Contact</SectionTitle>
             <SectionSubtitle>This is how you can reach me</SectionSubtitle>

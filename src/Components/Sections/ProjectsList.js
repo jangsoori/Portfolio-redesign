@@ -4,44 +4,48 @@ import ProjectItem from "./ProjectItem";
 
 const projects = [
   {
-    name: "SpaceZ",
-    desc:
-      "A landing page for fictional startup that will send you to the space! Hopefully they will be able to take you back to the Earth...",
-    stack: ["React", "React-Router", "SCSS"],
+    name: "My Team",
+
+    stack: ["react", "sass"],
     links: {
-      git: "https://github.com/jangsoori/spacez",
-      live: "https://spacez.web.app/",
+      git: "https://awesometeams.netlify.app",
+      code: "https://github.com/jangsoori/my-team",
     },
+    desc:
+      "Fully responsive, multi page website for fictional company specialising in recruitment.",
   },
   {
     name: "SpaceZ",
-    desc:
-      "A landing page for fictional startup that will send you to the space! Hopefully they will be able to take you back to the Earth...",
-    stack: ["React", "React-Router", "SCSS"],
+
+    stack: ["react", "sass"],
     links: {
-      git: "https://github.com/jangsoori/spacez",
-      live: "https://spacez.web.app/",
+      git: "https://spacez.web.app/",
+      code: "https://github.com/jangsoori/spacez",
     },
+    desc:
+      "A landing page for fictional space travel company SpaceZ. Fully responsive, available to view on mobile and tablets with great results.",
   },
   {
-    name: "SpaceZ",
-    desc:
-      "A landing page for fictional startup that will send you to the space! Hopefully they will be able to take you back to the Earth...",
-    stack: ["React", "React-Router", "SCSS"],
+    name: "The Run Up",
+
+    stack: ["react", "sass", "firebase", "firestore"],
     links: {
-      git: "https://github.com/jangsoori/spacez",
-      live: "https://spacez.web.app/",
+      git: "https://therunup-e8116.web.app/",
+      code: "https://github.com/jangsoori/therunup",
     },
+    desc:
+      "A crud application with authentication that let's you create and manage your runs.",
   },
   {
-    name: "SpaceZ",
-    desc:
-      "A landing page for fictional startup that will send you to the space! Hopefully they will be able to take you back to the Earth...",
-    stack: ["React", "React-Router", "SCSS"],
+    name: "Pocket Weather",
+
+    stack: ["react", "CSS", "OpenWeather API"],
     links: {
-      git: "https://github.com/jangsoori/spacez",
-      live: "https://spacez.web.app/",
+      git: "https://pocketweather-50927.web.app",
+      code: "https://github.com/jangsoori/weather",
     },
+    desc:
+      "A simple application to let you check weather in any country in the world. You can change units to metric or imperial.",
   },
 ];
 

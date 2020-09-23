@@ -51,7 +51,7 @@ const projects = [
 
 const StyledProjectsList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 600px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 600px));
   justify-content: left;
   gap: 2rem;
 `;

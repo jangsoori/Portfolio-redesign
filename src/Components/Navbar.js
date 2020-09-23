@@ -132,13 +132,27 @@ const links = [
   { display: "About", id: "about" },
 ];
 
+const StyledLink = styled(Link)`
+  &.active {
+    ${"" /* transition: 0.2s all; */}
+    font-weight: 400 !important;
+  }
+`;
+
 const renderLinks = () => {
   return links.map((link, i) => {
     return (
       <StyledMenuItem key={i}>
-        <Link spy={true} smooth={true} offset={-70} duration={500} to={link.id}>
+        <StyledLink
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          to={link.id}
+        >
           {link.display}
-        </Link>
+        </StyledLink>
       </StyledMenuItem>
     );
   });

@@ -43,12 +43,14 @@ const ProjectDesc = styled.p`
 
 //Stack
 export const ProjectStack = styled.ul`
-  display: grid;
+  ${"" /* display: grid;
   grid-template-columns: repeat(
     ${({ numberOfItems }) => numberOfItems},
     max-content
-  );
-  gap: 1rem;
+  ); */}
+  ${"" /* gap: 1rem; */}
+  display:flex;
+  flex-wrap: wrap;
 `;
 export const ProjectStackItem = styled.li`
   background: ${({ theme }) => theme.colors.primary};
@@ -58,6 +60,7 @@ export const ProjectStackItem = styled.li`
   color: white;
   border-radius: 2px;
   text-align: center;
+  margin: 0 0 5px 5px;
 `;
 
 //External Links

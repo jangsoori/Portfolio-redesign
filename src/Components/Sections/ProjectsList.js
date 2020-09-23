@@ -8,8 +8,8 @@ const projects = [
 
     stack: ["react", "sass"],
     links: {
-      git: "https://awesometeams.netlify.app",
-      code: "https://github.com/jangsoori/my-team",
+      live: "https://awesometeams.netlify.app",
+      git: "https://github.com/jangsoori/my-team",
     },
     desc:
       "Fully responsive, multi page website for fictional company specialising in recruitment.",
@@ -19,8 +19,8 @@ const projects = [
 
     stack: ["react", "sass"],
     links: {
-      git: "https://spacez.web.app/",
-      code: "https://github.com/jangsoori/spacez",
+      live: "https://spacez.web.app/",
+      git: "https://github.com/jangsoori/spacez",
     },
     desc:
       "A landing page for fictional space travel company SpaceZ. Fully responsive, available to view on mobile and tablets with great results.",
@@ -28,10 +28,10 @@ const projects = [
   {
     name: "The Run Up",
 
-    stack: ["react", "sass", "firebase", "firestore"],
+    stack: ["react", "redux", "sass", "firebase", "firestore"],
     links: {
-      git: "https://therunup-e8116.web.app/",
-      code: "https://github.com/jangsoori/therunup",
+      live: "https://therunup-e8116.web.app/",
+      git: "https://github.com/jangsoori/therunup",
     },
     desc:
       "A crud application with authentication that let's you create and manage your runs.",
@@ -41,8 +41,8 @@ const projects = [
 
     stack: ["react", "CSS", "OpenWeather API"],
     links: {
-      git: "https://pocketweather-50927.web.app",
-      code: "https://github.com/jangsoori/weather",
+      live: "https://pocketweather-50927.web.app",
+      git: "https://github.com/jangsoori/weather",
     },
     desc:
       "A simple application to let you check weather in any country in the world. You can change units to metric or imperial.",

@@ -6,29 +6,29 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 //Images
 import spacezDesktop from "../../Assets/Images/Projects/SpaceZ/desktop_1.jpg";
-import spacezMobile from "../../Assets/Images/Projects/SpaceZ/mobile_1.jpg";
+// import spacezMobile from "../../Assets/Images/Projects/SpaceZ/mobile_1.jpg";
 import myTeamDesktop_1 from "../../Assets/Images/Projects/MyTeam/desktop_1.jpg";
 import myTeamDesktop_2 from "../../Assets/Images/Projects/MyTeam/desktop_2.jpg";
-import myTeamMobile from "../../Assets/Images/Projects/MyTeam/mobile_1.jpg";
+// import myTeamMobile from "../../Assets/Images/Projects/MyTeam/mobile_1.jpg";
 import therunupDesktop_1 from "../../Assets/Images/Projects/TheRunUp/desktop_1.jpg";
 import therunupDesktop_2 from "../../Assets/Images/Projects/TheRunUp/desktop_2.jpg";
 import therunupDesktop_3 from "../../Assets/Images/Projects/TheRunUp/desktop_3.jpg";
 import weatherDesktop_1 from "../../Assets/Images/Projects/Weather/desktop_1.jpg";
 import weatherDesktop_2 from "../../Assets/Images/Projects/Weather/desktop_2.jpg";
 import weatherDesktop_3 from "../../Assets/Images/Projects/Weather/desktop_3.jpg";
-import weatherMobile from "../../Assets/Images/Projects/Weather/mobile_1.jpg";
-import weatherTablet from "../../Assets/Images/Projects/Weather/tablet_1.jpg";
+// import weatherMobile from "../../Assets/Images/Projects/Weather/mobile_1.jpg";
+// import weatherTablet from "../../Assets/Images/Projects/Weather/tablet_1.jpg";
 
 const imageSources = {
-  spacez: [spacezMobile, spacezDesktop],
-  myteam: [myTeamDesktop_1, myTeamDesktop_2, myTeamMobile],
+  spacez: [/*spacezMobile,*/ spacezDesktop],
+  myteam: [myTeamDesktop_1, myTeamDesktop_2 /*myTeamMobile*/],
   therunup: [therunupDesktop_1, therunupDesktop_2, therunupDesktop_3],
   weather: [
     weatherDesktop_1,
     weatherDesktop_2,
     weatherDesktop_3,
-    weatherMobile,
-    weatherTablet,
+    // weatherMobile,
+    // weatherTablet,
   ],
 };
 //Project popup
@@ -54,14 +54,15 @@ const StyledProjectDetails = styled.section`
 `;
 
 const ProjectDetailsContentWrapper = styled.section`
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
   background: white;
   border-radius: 2px;
   padding: 2rem;
   display: grid;
   gap: 2rem;
-  grid-template-rows: repeat(4, max-content);
+
+  grid-template-rows: repeat(3, max-content) 1fr;
 `;
 
 const ProjectDetailsHeader = styled.header`
@@ -106,16 +107,22 @@ const OverviewText = styled.p`
   opacity: 0.5;
 `;
 
-const CarouselContainer = styled.section``;
+const CarouselContainer = styled.section`
+  height: 100%;
+  .carousel .slide img {
+    object-fit: scale-down;
+    width: 100%;
+    height: 60vh;
+  }
+  ul,
+  li {
+    height: 100%;
+  }
+`;
 
 const renderImages = (project) => {
   return project.map((item) => {
-    return (
-      <div>
-        <img alt="" src={item} />
-        <p className="legend">Legend 1</p>
-      </div>
-    );
+    return <img alt="" src={item} />;
   });
 };
 
@@ -157,9 +164,13 @@ export default function ProjectDetails(props) {
         <ProjectStack numberOfItems={stack.length}>
           {renderStack(stack)}
         </ProjectStack>
+        {/* <div> */}
         <CarouselContainer>
-          <Carousel>{renderCarousel(props.details)}</Carousel>
+          <Carousel height="100%" showThumbs={false}>
+            {renderCarousel(props.details)}
+          </Carousel>
         </CarouselContainer>
+        {/* </div> */}
       </ProjectDetailsContentWrapper>
     </StyledProjectDetails>
   );

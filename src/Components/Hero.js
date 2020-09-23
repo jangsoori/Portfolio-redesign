@@ -21,6 +21,13 @@ const StyledHeroLeft = styled.section`
   display: grid;
   grid-template-rows: repeat(3, auto);
   row-gap: 3.5rem;
+
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    font-size: 50%;
+  }
 `;
 
 const StyledText = styled.h2`
@@ -36,6 +43,11 @@ const StyledText = styled.h2`
     font-size: 5rem;
     justify-self: center;
   }
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    font-size: 3.5rem;
+    grid-column: 1/3;
+    justify-self: start;
+  }
 `;
 
 const StyledBtnsWrapper = styled.section`
@@ -45,6 +57,11 @@ const StyledBtnsWrapper = styled.section`
   column-gap: 3rem;
   @media only screen and (max-width: 720px) {
     justify-content: center;
+  }
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    align-items: end;
   }
 `;
 const StyledBtn = styled.button`
@@ -70,6 +87,10 @@ const StyledBtn = styled.button`
     padding: 0.5rem 0;
     width: 10rem;
   }
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    width: max-content;
+    padding: 1rem;
+  }
 `;
 
 const StyledSocialsWrapper = styled.section`
@@ -88,6 +109,10 @@ const StyledSocialsWrapper = styled.section`
   @media only screen and (max-width: 720px) {
     justify-self: center;
   }
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
 `;
 
 const StyledHeroRight = styled.section``;
@@ -95,6 +120,13 @@ const StyledHeroRight = styled.section``;
 const StyledHeroImg = styled.img`
   @media only screen and (max-width: 1100px) {
     display: none;
+  }
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    right: 10%;
+    height: 15rem;
   }
 `;
 export default function Hero() {

@@ -63,6 +63,11 @@ const ProjectDetailsContentWrapper = styled.section`
   gap: 2rem;
 
   grid-template-rows: repeat(3, max-content) 1fr;
+
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const ProjectDetailsHeader = styled.header`
@@ -70,6 +75,10 @@ const ProjectDetailsHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   align-self: start;
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    grid-row: 1/2;
+    grid-columns: 1/-1;
+  }
 `;
 
 const Title = styled.header`
@@ -100,7 +109,12 @@ const Close = styled.button`
   }
 `;
 
-const Overview = styled.section``;
+const Overview = styled.section`
+  @media screen and (max-height: 450px) and (orientation: landscape) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+`;
 
 const OverviewText = styled.p`
   font-size: 1.3rem;

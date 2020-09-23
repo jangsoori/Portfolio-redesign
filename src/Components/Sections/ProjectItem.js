@@ -51,6 +51,7 @@ export const ProjectStack = styled.ul`
   ${"" /* gap: 1rem; */}
   display:flex;
   flex-wrap: wrap;
+  align-items: center;
 `;
 export const ProjectStackItem = styled.li`
   background: ${({ theme }) => theme.colors.primary};

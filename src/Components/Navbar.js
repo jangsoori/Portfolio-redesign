@@ -27,6 +27,9 @@ const StyledNavbar = styled.nav`
 const StyledLogo = styled.h1`
   font-weight: 300;
   font-size: 3rem;
+  @media screen and (max-height: 400px) and (orientation: landscape) {
+    font-size: 1.8rem;
+  }
 `;
 const StyledMenu = styled.ul`
   display: grid;

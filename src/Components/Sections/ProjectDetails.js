@@ -135,8 +135,8 @@ const CarouselContainer = styled.section`
 `;
 
 const renderImages = (project) => {
-  return project.map((item) => {
-    return <img alt="" src={item} />;
+  return project.map((item, i) => {
+    return <img key={i} alt="" src={item} />;
   });
 };
 
@@ -161,7 +161,6 @@ const renderCarousel = (project) => {
 export default function ProjectDetails(props) {
   const { name, desc, stack, links } = props.details;
 
-  console.log(props);
   return (
     <StyledProjectDetails open={props.open}>
       <ProjectDetailsContentWrapper>

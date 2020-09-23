@@ -90,14 +90,13 @@ const ProjectLink = styled.a`
 `;
 
 export const renderStack = (stack) =>
-  stack.map((item) => <ProjectStackItem>{item}</ProjectStackItem>);
+  stack.map((item, i) => <ProjectStackItem key={i}>{item}</ProjectStackItem>);
 export default function ProjectItem(props) {
   const { name, desc, stack, links } = props.project;
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen(!open);
 
-  console.log(open);
   return (
     <StyledProjectItem>
       <ProjectHeader>
@@ -114,12 +113,12 @@ export default function ProjectItem(props) {
       <ProjectLinks>
         <ProjectLinksItem>
           <ProjectLink href={links.git} target="_blank" rel="noopener">
-            Github<i class="fas fa-external-link-alt"></i>
+            Github<i className="fas fa-external-link-alt"></i>
           </ProjectLink>
         </ProjectLinksItem>
         <ProjectLinksItem>
           <ProjectLink href={links.live} target="_blank" rel="noopener">
-            Live<i class="fas fa-external-link-alt"></i>
+            Live<i className="fas fa-external-link-alt"></i>
           </ProjectLink>
         </ProjectLinksItem>
       </ProjectLinks>

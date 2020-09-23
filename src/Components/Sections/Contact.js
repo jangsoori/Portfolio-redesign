@@ -42,8 +42,7 @@ export default function Contact() {
           </SectionHeader>
           <InfoWrapper>
             <InfoItem>
-              {" "}
-              <i class="fas fa-envelope"></i>
+              <i className="fas fa-envelope"></i>
               <p> gracjankolodziej0 (at) gmail.com</p>
             </InfoItem>
             <InfoItem>

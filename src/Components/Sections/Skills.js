@@ -61,8 +61,8 @@ const skills = [
   { title: "Webpack", src: webpackIcon },
 ];
 const renderSkills = (list) =>
-  list.map((item) => (
-    <StyledSkillsListItem>
+  list.map((item, i) => (
+    <StyledSkillsListItem key={i}>
       <StyledSkillsListItemTitle>{item.title}</StyledSkillsListItemTitle>
       <StyledSkillsListItemIcon src={item.src} alt={item.title} />
     </StyledSkillsListItem>

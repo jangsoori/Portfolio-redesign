@@ -133,9 +133,9 @@ const links = [
 ];
 
 const renderLinks = () => {
-  return links.map((link) => {
+  return links.map((link, i) => {
     return (
-      <StyledMenuItem>
+      <StyledMenuItem key={i}>
         <Link spy={true} smooth={true} offset={-70} duration={500} to={link.id}>
           {link.display}
         </Link>

@@ -57,7 +57,7 @@ const StyledProjectsList = styled.ul`
 `;
 
 const renderItems = (list) =>
-  list.map((item) => <ProjectItem project={item} />);
+  list.map((item, i) => <ProjectItem key={i} project={item} />);
 export default function ProjectsList() {
   return <StyledProjectsList>{renderItems(projects)}</StyledProjectsList>;
 }

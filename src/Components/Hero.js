@@ -146,9 +146,9 @@ export default function Hero() {
               <StyledBtn>email me!</StyledBtn>
             </StyledBtnsWrapper>
             <StyledSocialsWrapper>
-              <i class="devicon-github-plain"></i>
-              <i class="devicon-linkedin-plain"></i>
-              <i class="devicon-codepen-plain"></i>
+              <i className="devicon-github-plain"></i>
+              <i className="devicon-linkedin-plain"></i>
+              <i className="devicon-codepen-plain"></i>
             </StyledSocialsWrapper>
           </StyledHeroLeft>
           <StyledHeroRight>

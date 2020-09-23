@@ -67,7 +67,7 @@ const StyledBtnsWrapper = styled.section`
 const StyledBtn = styled.button`
   background: white;
 
-  text-transform: uppercase;
+  ${"" /* text-transform: uppercase; */}
   border: 2px solid ${({ theme }) => theme.colors.primary};
   width: 18rem;
   font-size: 2.4rem;

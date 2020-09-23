@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ProjectDetails from "./ProjectDetails";
 
 const StyledProjectItem = styled.li`
   padding: 1.5rem;
@@ -41,7 +42,7 @@ const ProjectDesc = styled.p`
 `;
 
 //Stack
-const ProjectStack = styled.ul`
+export const ProjectStack = styled.ul`
   display: grid;
   grid-template-columns: repeat(
     ${({ numberOfItems }) => numberOfItems},
@@ -49,7 +50,7 @@ const ProjectStack = styled.ul`
   );
   gap: 1rem;
 `;
-const ProjectStackItem = styled.li`
+export const ProjectStackItem = styled.li`
   background: ${({ theme }) => theme.colors.primary};
   padding: 0.4rem 1.6rem;
   font-weight: 300;
@@ -83,15 +84,24 @@ const ProjectLink = styled.a`
     font-size: 1rem;
   }
 `;
-const renderStack = (stack) =>
+
+export const renderStack = (stack) =>
   stack.map((item) => <ProjectStackItem>{item}</ProjectStackItem>);
 export default function ProjectItem(props) {
   const { name, desc, stack, links } = props.project;
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(!open);
+
+  console.log(open);
   return (
     <StyledProjectItem>
       <ProjectHeader>
         <ProjectTitle>{name}</ProjectTitle>
-        <ProjectInfoBtn className="fas fa-info-circle"></ProjectInfoBtn>
+        <ProjectInfoBtn
+          onClick={() => handleOpen()}
+          className="fas fa-info-circle"
+        ></ProjectInfoBtn>
       </ProjectHeader>
       <ProjectDesc>{desc}</ProjectDesc>
       <ProjectStack numberOfItems={stack.length}>
@@ -109,6 +119,11 @@ export default function ProjectItem(props) {
           </ProjectLink>
         </ProjectLinksItem>
       </ProjectLinks>
+      <ProjectDetails
+        handleOpen={handleOpen}
+        details={props.project}
+        open={open}
+      />
     </StyledProjectItem>
   );
 }

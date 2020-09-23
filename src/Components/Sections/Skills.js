@@ -27,15 +27,21 @@ import SVG from "react-inlinesvg";
 const StyledSkillsContent = styled.section``;
 const StyledSkillsList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
   gap: 6.4rem;
+  justify-content: center;
 `;
 const StyledSkillsListItem = styled.li`
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 1rem;
 `;
-const StyledSkillsListItemIcon = styled(SVG)``;
+const StyledSkillsListItemIcon = styled(SVG)`
+  ${"" /* @media only screen and (max-width: 400px) {
+    width: 50%;
+    justify-self: center;
+  } */}
+`;
 const StyledSkillsListItemTitle = styled.p`
   text-align: center;
   font-size: 1.6rem;

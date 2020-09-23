@@ -20,6 +20,9 @@ const SectionAboutContentText = styled.p`
   font-size: 3rem;
   line-height: 1.5;
   color: white;
+  @media only screen and (max-width: 760px) {
+    font-size: 2rem;
+  }
 `;
 export default function About() {
   return (

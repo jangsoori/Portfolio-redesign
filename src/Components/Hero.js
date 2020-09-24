@@ -143,7 +143,7 @@ export default function Hero() {
             </StyledText>
             <StyledBtnsWrapper>
               <StyledBtn
-                href="https://drive.google.com/file/d/1lbDyE3NPBN4KlSmsVv15hvUa_lWbWFod/view?usp=sharing"
+                href="https://drive.google.com/file/d/12jFtgn5ST4NnQ2HjqahBgbSB_LkPMTsA/view?usp=sharing"
                 target="_blank"
                 rel="noopener"
               >

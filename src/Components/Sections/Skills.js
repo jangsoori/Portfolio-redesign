@@ -15,6 +15,7 @@ import cssIcon from "../../Assets/Icons/css3.svg";
 import htmlIcon from "../../Assets/Icons/html5.svg";
 import jsIcon from "../../Assets/Icons/javascript.svg";
 import reactIcon from "../../Assets/Icons/react.svg";
+import nextIcon from "../../Assets/Icons/next.svg";
 import reduxIcon from "../../Assets/Icons/redux.svg";
 import sassIcon from "../../Assets/Icons/sass.svg";
 import styledIcon from "../../Assets/Icons/styled.svg";
@@ -34,13 +35,16 @@ const StyledSkillsList = styled.ul`
 const StyledSkillsListItem = styled.li`
   display: grid;
   grid-template-rows: auto 1fr;
+  align-self: center;
   gap: 1rem;
 `;
 const StyledSkillsListItemIcon = styled(SVG)`
-  ${"" /* @media only screen and (max-width: 400px) {
+  ${
+    "" /* @media only screen and (max-width: 400px) {
     width: 50%;
     justify-self: center;
-  } */}
+  } */
+  }
 `;
 const StyledSkillsListItemTitle = styled.p`
   text-align: center;
@@ -54,6 +58,7 @@ const skills = [
   { title: "JavaScript (ES6+)", src: jsIcon },
   { title: "React", src: reactIcon },
   { title: "Redux", src: reduxIcon },
+  { title: "Next", src: nextIcon },
   { title: "Sass", src: sassIcon },
   { title: "Styled Components", src: styledIcon },
   { title: "Git", src: gitIcon },

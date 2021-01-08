@@ -70,6 +70,7 @@ const StyledMenuItem = styled.li`
 `;
 
 const StyledBurger = styled.button`
+  cursor: pointer;
   width: 3rem;
   height: 2rem;
   background: none;
